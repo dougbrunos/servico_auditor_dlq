@@ -10,6 +10,7 @@ public class DominioParaEntidadeConverter {
     public AuditoriaEntity converterParaLinhaTabela(OcorrenciaErroBO bo) {
         AuditoriaEntity entidade = new AuditoriaEntity();
         entidade.setPayload(bo.getConteudoOriginalJson());
+        entidade.setQueueName(bo.getOrigin());
         return entidade;
     }
 
